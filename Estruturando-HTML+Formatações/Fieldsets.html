@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário de Cadastro</title>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4; /* Fundo levemente cinza */
+    }
+
+    h1 {
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+      font-size: 2em;
+    }
+
+    form {
+      max-width: 900px; /* Define uma largura máxima para o formulário */
+      margin: 0 auto;   /* Centraliza o formulário na página */
+    }
+
+    /* Estilização da "caixa" do fieldset.
+      Isso cria as bordas ao redor de cada seção.
+    */
+    fieldset {
+      border: 1px solid #999;
+      margin-bottom: 20px; /* Espaço entre as seções */
+      padding: 20px;
+    }
+
+    /* Estilização da legenda (o título da seção)
+    */
+    legend {
+      font-size: 1.1em;
+      font-weight: bold;
+      padding: 0 10px; /* Espaçamento para não grudar na borda */
+      color: #333;
+    }
+
+    /* Este é o contêiner DENTRO do fieldset que usará 
+      flexbox para criar as colunas.
+    */
+    .fieldset-content {
+      display: flex;
+      gap: 50px; /* Espaço entre as colunas */
+    }
+
+    /* Cada coluna */
+    .column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* O grupo de cada "label + input" */
+    .form-group {
+      margin-bottom: 12px;
+      display: flex; /* Alinha label e input na mesma linha */
+      align-items: center; /* Centraliza verticalmente */
+    }
+
+    /* Estilização dos RÓTULOS (Nome:, Profissão:, etc.) */
+    .form-group label {
+      display: inline-block;
+      width: 80px;        /* Largura fixa para os rótulos */
+      text-align: right;  /* Alinha o texto à direita */
+      margin-right: 10px; /* Espaço entre o rótulo e o campo */
+    }
+
+    /* Estilização de todos os CAMPOS DE TEXTO */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="number"] {
+      width: 250px;           /* Largura padrão dos campos */
+      padding: 6px;
+      border: 1px solid #999;
+    }
+
+    /* Estilização especial APENAS para o campo Número */
+    #numero {
+      width: 60px; /* Campo de número é menor */
+    }
+
+    /* Onde os botões ficam */
+    .button-group {
+      text-align: left; /* Alinha os botões à esquerda */
+    }
+
+    /* Estilização dos botões */
+    button {
+      padding: 8px 15px;
+      margin-right: 10px;
+      background-color: #f0f0f0;
+      border: 1px solid #777;
+      cursor: pointer;
+    }
+    
+    button:hover {
+      background-color: #e0e0e0;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h1>Formulário de cadastro</h1>
+
+  <form action="#" method="get">
+    
+    <fieldset>
+      <legend>Dados Pessoais</legend>
+      <div class="fieldset-content">
+        <div class="column">
+          <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome">
+          </div>
+          <div class="form-group">
+            <label for="profissao">Profissão:</label>
+            <input type="text" id="profissao" name="profissao">
+          </div>
+        </div>
+        <div class="column">
+          <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email">
+          </div>
+          <div class="form-group">
+            <label for="empresa">Empresa:</label>
+            <input type="text" id="empresa" name="empresa">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Endereço</legend>
+      <div class="fieldset-content">
+        <div class="column">
+          <div class="form-group">
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco">
+          </div>
+          <div class="form-group">
+            <label for="bairro">Bairro:</label>
+            <input type="text" id="bairro" name="bairro">
+          </div>
+          <div class="form-group">
+            <label for="cidade">Cidade/UF:</label>
+            <input type="text" id="cidade" name="cidade_uf">
+          </div>
+        </div>
+        <div class="column">
+          <div class="form-group">
+            <label for="numero">Número:</label>
+            <input type="number" id="numero" name="numero">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    
+    <fieldset>
+      <legend>Informações de contato</legend>
+      <div class="fieldset-content">
+        <div class="column">
+          <div class="form-group">
+            <label for="celular">Celular:</label>
+            <input type="tel" id="celular" name="celular">
+          </div>
+          <div class="form-group">
+            <label for="linkedin">Linkedin:</label>
+            <input type="url" id="linkedin" name="linkedin">
+          </div>
+        </div>
+        <div class="column">
+          <div class="form-group">
+            <label for="whatsapp">Whatsapp:</label>
+            <input type="tel" id="whatsapp" name="whatsapp">
+          </div>
+          <div class="form-group">
+            <label for="github">Github:</label>
+            <input type="url" id="github" name="github">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+
+    <div class="button-group">
+      <button type="reset">Limpar</button>
+      <button type="submit">Enviar formulário</button>
+    </div>
+    
+  </form>
+
+</body>
+</html>

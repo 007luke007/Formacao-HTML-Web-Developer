@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo de iframe</title>
+  
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      line-height: 1.6; 
+      margin: 30px;
+      background-color: #f4f4f4;
+    }
+    h1, h2 { 
+      border-bottom: 2px solid #ccc; 
+      padding-bottom: 5px; 
+    }
+    .container-iframe { 
+      border: 1px solid #ccc; 
+      padding: 15px; 
+      margin-bottom: 25px; 
+      background-color: #ffffff;
+      border-radius: 5px;
+    }
+    iframe {
+      /* Remove a borda padrão feia do iframe */
+      border: none; 
+      /* Adiciona uma borda sutil para ver a "janela" */
+      border: 1px solid #ddd;
+      /* Garante que o iframe não "vaze" do container */
+      max-width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Página com Exemplos de &lt;iframe&gt;</h1>
+  <p>A tag <code>&lt;iframe&gt;</code> é usada para "embutir" outra página ou conteúdo (como um vídeo ou mapa) dentro da sua página atual.</p>
+
+  <div class="container-iframe">
+    <h2>Exemplo 1: Embutindo um Vídeo do YouTube</h2>
+    <p>
+      Este é o uso mais comum para a tag <code>&lt;iframe&gt;</code>. 
+      Quando você clica em "Compartilhar" -> "Incorporar" no YouTube, 
+      ele te dá um código como este:
+    </p>
+    
+    <iframe 
+      width="560" 
+      height="315" 
+      src="https://www.youtube.com/embed/ok-plXXHl2w" 
+      title="YouTube: O que é HTML?" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <div class="container-iframe">
+    <h2>Exemplo 2: Embutindo outro Website (W3Schools)</h2>
+    <p>
+      Você também pode embutir um site inteiro.
+      <br>
+      <strong>Nota:</strong> Muitos sites (como Google.com ou Facebook.com) 
+      bloqueiam ativamente essa prática por razões de segurança, 
+      mas sites educacionais como o W3Schools geralmente permitem.
+    </p>
+    
+    <iframe 
+      src="https://www.w3schools.com" 
+      width="800" 
+      height="400" 
+      title="Site W3Schools.com">
+    </iframe>
+  </div>
+
+</body>
+</html>

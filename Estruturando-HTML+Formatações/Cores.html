@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Demonstração de Cores no Navegador</title>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      padding: 20px;
+    }
+    
+    h1 {
+      color: #D94848; /* Cor do título da sua imagem */
+      font-family: 'Verdana', sans-serif;
+    }
+
+    /* O contêiner principal que segura os cartões */
+    .container {
+      display: flex;
+      flex-wrap: wrap; /* Permite que os itens quebrem a linha */
+      gap: 20px;       /* Espaço entre os cartões */
+    }
+
+    /* Estilo de cada "cartão" de cor */
+    .color-card {
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      width: 300px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .color-card h2 {
+      margin-top: 0;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 5px;
+    }
+
+    /* A "caixa" que mostra a cor */
+    .color-box {
+      width: 100%;
+      height: 100px;
+      border: 1px solid #888;
+      margin-bottom: 10px;
+    }
+    
+    /* Fundo quadriculado para demonstrar transparência */
+    .transparency-demo {
+      background-image: 
+        linear-gradient(45deg, #ccc 25%, transparent 25%), 
+        linear-gradient(-45deg, #ccc 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #ccc 75%),
+        linear-gradient(-45deg, transparent 75%, #ccc 75%);
+      background-size: 20px 20px;
+      background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    }
+
+    /* Para mostrar o código de exemplo */
+    pre {
+      background-color: #f9f9f9;
+      border: 1px solid #eee;
+      padding: 10px;
+      border-radius: 4px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.9em;
+    }
+    
+    /* --- AS CORES REAIS SENDO APLICADAS --- */
+
+    #box-name {
+      background-color: red;
+    }
+    
+    #box-rgb {
+      background-color: rgb(255, 0, 0);
+    }
+
+    
+    #box-hex {
+      background-color: #ff0000;
+    }
+    
+    #box-hsl-1 { background-color: hsl(0, 100%, 50%); }
+    #box-hsl-2 { background-color: hsl(120, 100%, 50%); }
+    #box-hsl-3 { background-color: hsl(240, 100%, 50%); }
+
+    
+    #box-rgba {
+      /* 50% de transparência */
+      background-color: rgba(255, 0, 0, 0.5); 
+    }
+
+    
+    #box-hsla {
+      /* 50% de transparência */
+      background-color: hsla(0, 100%, 50%, 0.5);
+    }
+    
+  </style>
+</head>
+
+<body>
+
+  <h1>Cores no navegador</h1>
+  <p>Você pode escolher por nome de cores ou também pelos seguintes valores:</p>
+
+  <div class="container">
+    
+    <div class="color-card">
+      <h2>Por Nome</h2>
+      <div class="color-box" id="box-name"></div>
+      <p>Nomes de cores predefinidos (ex: red, blue, green, aquad, tomato).</p>
+      <pre>background-color: red;</pre>
+    </div>
+
+    <div class="color-card">
+      <h2>RGB</h2>
+      <div class="color-box" id="box-rgb"></div>
+      <p>Combinação de Vermelho, Verde e Azul (Red, Green, Blue).</p>
+      <pre>background-color: rgb(255, 0, 0);</pre>
+    </div>
+    
+    <div class="color-card">
+      <h2>HEX</h2>
+      <div class="color-box" id="box-hex"></div>
+      <p>Combinação de Vermelho, Verde e Azul, mas descrito em Hexadecimal.</p>
+      <pre>background-color: #ff0000;</pre>
+    </div>
+    
+    <div class="color-card">
+      <h2>HSL</h2>
+      <div class="color-box" id="box-hsl-1"></div> <div class="color-box" id="box-hsl-2"></div> <div class="color-box" id="box-hsl-3"></div> <p>Matiz (Hue), Saturação (Saturation) e Iluminação (Lighten). 0 é vermelho, 120 verde, 240 azul.</p>
+      <pre>background-color: hsl(0, 100%, 50%);</pre>
+    </div>
+    
+    <div class="color-card transparency-demo"> <h2>RGBA</h2>
+      <div class="color-box" id="box-rgba"></div>
+      <p>Mesmo que RGB, porém adicionado canal Alpha (Transparência).</p>
+      <pre>background-color: rgba(255, 0, 0, 0.5);</pre>
+    </div>
+    
+    <div class="color-card transparency-demo"> <h2>HSLA</h2>
+      <div class="color-box" id="box-hsla"></div>
+      <p>Mesmo que HSL, porém adicionado canal Alpha (Transparência).</p>
+      <pre>background-color: hsla(0, 100%, 50%, 0.5);</pre>
+    </div>
+
+  </div>
+
+</body>
+</html>
