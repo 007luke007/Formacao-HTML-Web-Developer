@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenho Simples em Canvas</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f4f8;
+            font-family: 'Inter', sans-serif;
+            color: #333;
+        }
+
+        /* Estilo para a área do Canvas */
+        #minhaTela {
+            border: 3px solid #3b82f6; /* Borda azul vibrante */
+            border-radius: 12px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            margin-top: 20px;
+        }
+
+        h1 {
+            color: #1e40af;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Desenho de Exemplo</h1>
+
+    <!-- 1. O Elemento Canvas: define a área de desenho -->
+    <canvas id="minhaTela" width="400" height="300">
+        Seu navegador não suporta a tag canvas.
+    </canvas>
+
+    <script>
+        // Função para inicializar e desenhar no canvas
+        function initCanvas() {
+            // 2. Seleciona o elemento canvas usando seu ID
+            const canvas = document.getElementById('minhaTela');
+
+            // Verifica se o elemento canvas foi encontrado e se o contexto 2D é suportado
+            if (!canvas || !canvas.getContext) {
+                console.error("Não foi possível obter o contexto 2D. O navegador pode não suportar canvas ou o elemento não foi encontrado.");
+                return; 
+            }
+
+            // 3. Obtém o contexto de desenho 2D
+            const ctx = canvas.getContext('2d');
+
+            // --- Configurações e Desenho ---
+
+            // Configura a cor e o estilo para o círculo
+            ctx.fillStyle = '#ef4444'; // Cor de preenchimento: vermelho
+            ctx.strokeStyle = '#dc2626'; // Cor da borda: vermelho escuro
+            ctx.lineWidth = 5; // Espessura da borda
+
+            // 4. Desenha um Círculo (Arco)
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+            const radius = 80;
+
+            ctx.beginPath(); // Inicia um novo caminho de desenho
+            // Arc(x, y, raio, ângulo inicial, ângulo final)
+            ctx.arc(centerX, centerY, radius, 0, Math.PI * 2, false); 
+            ctx.closePath(); // Fecha o caminho (opcional para círculos)
+
+            ctx.fill(); // Preenche o círculo com a cor de preenchimento (fillStyle)
+            ctx.stroke(); // Desenha a borda do círculo (strokeStyle)
+
+            // 5. Adiciona Texto
+            ctx.fillStyle = '#000000'; // Define a cor do texto para preto
+            ctx.font = '24px Inter, sans-serif'; // Define a fonte e tamanho
+            ctx.textAlign = 'center'; // Alinha o texto horizontalmente no centro
+            ctx.textBaseline = 'middle'; // Alinha o texto verticalmente no meio
+
+            // fillText(texto, x, y)
+            ctx.fillText('CANVAS', centerX, centerY);
+        }
+
+        // Garante que o script é executado depois que o DOM estiver completamente carregado
+        window.onload = initCanvas;
+    </script>
+
+</body>
+</html>

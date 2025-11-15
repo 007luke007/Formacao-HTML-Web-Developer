@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Layout Semântico HTML5</title>
+    <style>
+        /* CSS Básico apenas para visualização da estrutura */
+        body { margin: 0; font-family: sans-serif; }
+        header, nav, section, article, aside, footer {
+            padding: 10px; margin: 5px; border: 1px solid #ccc;
+            text-align: center;
+        }
+        header { background-color: #e6ffe6; }
+        nav { background-color: #e6e6ff; }
+        footer { background-color: #ffe6e6; }
+        .content-area { display: flex; }
+        .main-content { flex-grow: 3; }
+        section { background-color: #ffccff; }
+        article { background-color: #ccffe6; }
+        aside { background-color: #ffffcc; flex-grow: 1; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Título Principal do Site</h1>
+        </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+        </ul>
+        </nav>
+    
+    <div class="content-area"> 
+        <div class="main-content">
+            <section>
+                <h2>Título da Seção</h2>
+                <p>Agrupamento temático de conteúdo.</p>
+                </section>
+    
+            <article>
+                <h3>Título do Artigo</h3>
+                <p>Conteúdo independente e redistribuível (ex: Post de Blog, Notícia).</p>
+                </article>
+        </div>
+        
+        <aside>
+            <h4>Conteúdo Relacionado</h4>
+            <p>Conteúdo tangencial ao conteúdo principal (ex: Sidebar, Publicidade).</p>
+            </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Exemplo de Site. Todos os direitos reservados.</p>
+        </footer>
+</body>
+</html>

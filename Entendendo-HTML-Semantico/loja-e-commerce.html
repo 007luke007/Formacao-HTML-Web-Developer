@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Virtual Semântica</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: #f8f8f8; }
+        header { background-color: #e74c3c; color: white; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
+        header h1 { margin: 0; }
+        nav ul { list-style: none; padding: 0; margin: 0; display: flex; }
+        nav ul li a { color: white; padding: 10px 15px; text-decoration: none; display: block; }
+        
+        .main-container { 
+            display: flex; 
+            max-width: 1300px; 
+            margin: 20px auto; 
+            gap: 20px;
+        }
+        aside { 
+            flex: 1; 
+            background-color: white; 
+            padding: 15px; 
+            border-radius: 5px; 
+            box-shadow: 0 0 5px rgba(0,0,0,0.1); 
+        }
+        main { 
+            flex: 4; 
+            background-color: white; 
+            padding: 20px; 
+            border-radius: 5px;
+        }
+        
+        /* Estilos dos Produtos (Article) */
+        #produtos-lista { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 20px; 
+        }
+        article { 
+            border: 1px solid #ccc; 
+            padding: 15px; 
+            text-align: center; 
+            border-radius: 5px; 
+            background-color: #fff;
+        }
+        article h3 { color: #e74c3c; }
+        
+        footer { 
+            background-color: #333; 
+            color: white; 
+            text-align: center; 
+            padding: 15px; 
+            margin-top: 20px; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>E-Shop Semântico</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Eletrônicos</a></li>
+                <li><a href="#">Roupas</a></li>
+                <li><a href="#">Meu Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <aside>
+            <h3>Filtros de Busca</h3>
+            <p><strong>Preço:</strong> R$0 - R$500</p>
+            <p><strong>Cor:</strong> Azul, Preto, Branco</p>
+            <p><strong>Marca:</strong> Marca A, Marca B</p>
+        </aside>
+
+        <main>
+            <h2>Smartphones em Oferta</h2>
+            
+            <section id="produtos-lista">
+                <article>
+                    <h3>Smartphone X</h3>
+                    <p>Tela OLED, 128GB.</p>
+                    <strong>R$ 1.999,00</strong>
+                </article>
+                
+                <article>
+                    <h3>Smartphone Y</h3>
+                    <p>Bateria de longa duração, Câmera Dupla.</p>
+                    <strong>R$ 1.500,00</strong>
+                </article>
+                 <article>
+                    <h3>Smartphone Z</h3>
+                    <p>Design moderno, 256GB.</p>
+                    <strong>R$ 2.400,00</strong>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>Acesse nossas redes sociais e política de troca.</p>
+        <p>&copy; 2025 E-Shop Semântico.</p>
+    </footer>
+</body>
+</html>

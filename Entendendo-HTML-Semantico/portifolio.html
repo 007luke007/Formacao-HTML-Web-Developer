@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Semântico</title>
+    <style>
+        body { font-family: 'Roboto', sans-serif; margin: 0; background-color: #f0f4f8; }
+        header { background-color: #3f51b5; color: white; padding: 15px 50px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+        header nav ul { list-style: none; padding: 0; margin: 0; display: flex; }
+        header nav ul li a { color: white; padding: 10px 15px; text-decoration: none; display: block; transition: background-color 0.3s; }
+        header nav ul li a:hover { background-color: #5c6bc0; }
+        
+        main section { 
+            padding: 80px 50px; 
+            text-align: center; 
+            min-height: 80vh; 
+        }
+        #sobre { background-color: #ffffff; color: #333; }
+        #projetos { background-color: #e8eaf6; color: #333; }
+        #contato { background-color: #3f51b5; color: white; }
+
+        /* Estilos dos Artigos (Projetos) */
+        .grid-projetos { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px; 
+            margin-top: 40px;
+        }
+        article { 
+            background-color: white; 
+            padding: 20px; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+            text-align: left;
+        }
+        article h3 { color: #3f51b5; }
+
+        footer { 
+            background-color: #212121; 
+            color: white; 
+            text-align: center; 
+            padding: 20px; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu Portfólio</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre">
+            <h2>👋 Sobre Mim</h2>
+            <p>Olá! Sou um desenvolvedor focado em criar soluções web acessíveis e semânticas, utilizando o poder do HTML5.</p>
+            <p>Esta seção é um agrupamento temático sobre minha introdução.</p>
+        </section>
+
+        <section id="projetos">
+            <h2>🛠️ Meus Projetos</h2>
+            <div class="grid-projetos">
+                <article>
+                    <h3>Projeto Alpha (HTML/CSS)</h3>
+                    <p>Desenvolvimento de uma Landing Page responsiva do zero.</p>
+                </article>
+                <article>
+                    <h3>E-commerce Mockup</h3>
+                    <p>Estruturação semântica de uma loja virtual.</p>
+                </article>
+                <article>
+                    <h3>Blog Simples</h3>
+                    <p>Uso eficiente de tags Article e Aside.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contato">
+            <h2>📧 Contato</h2>
+            <p>Entre em contato para discutirmos seu próximo projeto!</p>
+            <p>Email: contato@exemplo.com</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Portfólio Semântico. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

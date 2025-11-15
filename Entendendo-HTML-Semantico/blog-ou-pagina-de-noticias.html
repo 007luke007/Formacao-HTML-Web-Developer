@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Semântico</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background-color: #f4f4f4; }
+        header { background-color: #007bff; color: white; padding: 20px; text-align: center; }
+        nav { background-color: #333; }
+        nav ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; }
+        nav ul li a { color: white; padding: 10px 15px; text-decoration: none; display: block; }
+        nav ul li a:hover { background-color: #555; }
+        
+        .main-container { 
+            display: flex; 
+            max-width: 1200px; 
+            margin: 20px auto; 
+            gap: 20px; 
+        }
+        main { 
+            flex: 3; 
+            background-color: white; 
+            padding: 20px; 
+            border-radius: 5px;
+        }
+        aside { 
+            flex: 1; 
+            background-color: #e9ecef; 
+            padding: 15px; 
+            border-radius: 5px; 
+        }
+        
+        /* Estilos do Conteúdo Principal */
+        article { 
+            border-bottom: 1px solid #ddd; 
+            margin-bottom: 20px; 
+            padding-bottom: 20px; 
+        }
+        article:last-child { border-bottom: none; }
+        
+        footer { 
+            background-color: #333; 
+            color: white; 
+            text-align: center; 
+            padding: 15px; 
+            margin-top: 20px; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu Portal de Notícias Semântico</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Política</a></li>
+            <li><a href="#">Esportes</a></li>
+            <li><a href="#">Tecnologia</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+        <main>
+            <h2>Artigos em Destaque</h2>
+            
+            <section id="posts-recentes">
+                <article>
+                    <h3>O Futuro do Desenvolvimento Web</h3>
+                    <p>Por Ana Silva | <time datetime="2025-11-14">14 de Novembro de 2025</time></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Conteúdo independente e completo.</p>
+                </article>
+                
+                <article>
+                    <h3>A Revolução do Design Responsivo</h3>
+                    <p>Por Bruno Costa | <time datetime="2025-11-13">13 de Novembro de 2025</time></p>
+                    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. O HTML5 nos ajuda muito!</p>
+                </article>
+            </section>
+        </main>
+
+        <aside>
+            <h3>Mais Lidos</h3>
+            <ul>
+                <li><a href="#">Guia Completo de CSS Flexbox</a></li>
+                <li><a href="#">O que são Tags Semânticas?</a></li>
+                <li><a href="#">Publicidade Aqui!</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Portal Semântico. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

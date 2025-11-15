@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Acessível de Robson Dias</title>
+    <style>
+        body { font-family: sans-serif; margin: 0; background-color: #f4f4f9; color: #333; }
+        header { background-color: #3f51b5; color: white; padding: 20px; position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; }
+        nav ul li a { color: white; padding: 10px 20px; text-decoration: none; display: block; }
+        nav ul li a:hover { background-color: #5c6bc0; }
+        main { max-width: 1000px; margin: 0 auto; }
+        section { padding: 80px 20px; margin-bottom: 1px; border-bottom: 1px solid #ddd; }
+        h2 { text-align: center; color: #3f51b5; margin-bottom: 40px; }
+        article { background-color: white; border: 1px solid #eee; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .sr-only { 
+            /* Classe essencial para acessibilidade: Esconde visualmente, mas acessível a leitores de tela */
+            position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; 
+            clip: rect(0, 0, 0, 0); border: 0; 
+        }
+        footer { background-color: #333; color: white; text-align: center; padding: 30px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="site-title" **role="banner"**>
+            <h1>[Seu Nome] - Desenvolvedor Web</h1>
+        </div>
+        <nav **aria-label="Navegação Principal do Portfólio"**>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre" **aria-labelledby="titulo-sobre"**>
+            <h2 id="titulo-sobre">Sobre Mim</h2>
+            <p>Olá! Sou Robson Dias, um desenvolvedor iniciando em front-end e gostando de interfaces acessíveis e semânticas.</p>
+        </section>
+
+        <section id="habilidades" **aria-labelledby="titulo-habilidades"**>
+            <h2 id="titulo-habilidades">Minhas Habilidades</h2>
+            <ul>
+                <li>HTML5 Semântico</li>
+                <li>CSS3 (Flexbox, Grid)</li>
+                <li>JavaScript Moderno</li>
+                <li>Acessibilidade (WCAG, ARIA)</li>
+            </ul>
+        </section>
+
+        <section id="projetos" **aria-labelledby="titulo-projetos"**>
+            <h2 id="titulo-projetos">Projetos Recentes</h2>
+            
+            <article **aria-label="Detalhes do Projeto E-Commerce"**>
+                <h3>E-Commerce Acessível</h3>
+                <p>Desenvolvimento da estrutura de um e-commerce com foco em navegação por teclado e contraste de cores.</p>
+                <a href="[Link do Projeto]" **target="_blank"**>Ver Projeto <span class="sr-only">(abre em nova janela)</span></a>
+            </article>
+
+            <article **aria-label="Detalhes do Projeto Aplicação de Tarefas"**>
+                <h3>Aplicação de Tarefas</h3>
+                <p>Aplicação web simples utilizando JavaScript e implementando rótulos ARIA em formulários.</p>
+                <a href="[Link do Projeto]" **target="_blank"**>Ver Projeto <span class="sr-only">(abre em nova janela)</span></a>
+            </article>
+
+            <figure **aria-label="Exemplo de design"**>
+                
+                <figcaption>Mockup da interface do Projeto E-Commerce.</figcaption>
+            </figure>
+            
+        </section>
+
+        <section id="contato" **aria-labelledby="titulo-contato"**>
+            <h2 id="titulo-contato">Entre em Contato</h2>
+            <address>
+                <p>Email: <a href="mailto:seuemail@exemplo.com">robson.carlos@gmail.com</a></p>
+                <p>LinkedIn: <a href="[https://www.linkedin.com/in/robson-carlos-dias-094a5533/" target="_blank">https://www.linkedin.com/in/robson-carlos-dias-094a5533/</a></p>
+            </address>
+        </section>
+    </main>
+
+    <footer **role="contentinfo"**>
+        <p>Desenvolvido com 💖 e HTML Semântico.</p>
+        <p>&copy; <time datetime="2025">2025</time> Robson Dias.</p>
+    </footer>
+</body>
+</html>
