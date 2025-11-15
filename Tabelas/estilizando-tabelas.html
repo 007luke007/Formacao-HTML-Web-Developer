@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilizando Tabelas</title>
+    <style>
+        /* INÍCIO DO CSS */
+        
+        /* Estiliza o elemento principal da tabela */
+        table {
+            /* Adiciona uma sombra para dar profundidade (shadow) */
+            -webkit-box-shadow: 12px 14px 6px 5px rgba(0,0,0,0.24); /* Suporte para navegadores WebKit (Chrome, Safari) */
+            box-shadow: 12px 14px 6px 5px rgba(0,0,0,0.24); /* Padrão CSS */
+            /* Adiciona uma borda sólida cinza de 1px ao redor da tabela */
+            border: solid 1px gray;
+            /* Nota: Atributos 'width', 'align', 'cellspacing' e 'cellpadding' no HTML são obsoletos.
+               As propriedades 'border-collapse' e 'margin: 0 auto' seriam as substituições CSS modernas. */
+        }
+        
+        /* Estiliza as células de cabeçalho (<th>) dentro do cabeçalho da tabela (<thead>) */
+        table thead th {
+            background-color: black; /* Cor de fundo preta */
+            color: white; /* Cor do texto branca */
+        }
+        
+        /* Estiliza as células de dados (<td>) dentro do rodapé da tabela (<tfoot>) */
+        table tfoot td {
+            background-color: lightgray; /* Cor de fundo cinza claro */
+        }
+        
+        /* Estiliza as células de dados (<td>) de linhas pares (tr:nth-child(even)) no corpo da tabela (<tbody>) */
+        /* Cria o efeito "Zebra" ou "Banda" para facilitar a leitura */
+        table tbody tr:nth-child(even) td {
+            background-color: #f2f2f2; /* Cor de fundo muito clara para as linhas pares */
+        }
+        
+        /* Estiliza as células de dados (<td>) quando o mouse passa sobre a linha (<tr>) no corpo da tabela (<tbody>) */
+        /* Cria o efeito de "Hover" (passar o mouse) */
+        table tbody tr:hover td {
+            background-color: #e9e9e9; /* Cor de fundo um pouco mais escura para destacar a linha */
+            cursor: pointer; /* Transforma o cursor em uma "mãozinha" para indicar interatividade */
+        }
+    </style>
+</head>
+<body>
+    
+    <table sumary="descrição da tabela" width="250" align="center" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr>
+                <th colspan="2">Minha Tabela</th>
+            <tr>
+            <tr>
+                <th title="Nome Completo">Nome</th>
+                <th>Idade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Robson</td>
+                <td>43</td>
+            </tr>
+            <tr>
+                <td>Mariana</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>Raphaela</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>Thais</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Maria</td>
+                <td>38</td>
+            </tr>
+            <tr>
+                <td>Carlos</td>
+                <td>12</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+            <td>Total</td> <td>6</td>     </tr>
+        </tfoot>
+        </table>
+</body>
+</html>
+```
